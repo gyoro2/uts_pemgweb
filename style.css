@@ -1,0 +1,134 @@
+@font-face{
+    font-family: 'SAOUI-Regular';
+    src: url('font/SAOUI-Regular.otf') format('opentype'),
+         url('font/SAOUI-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2{
+    text-align: center;
+    font-family: 'SAOUI-Regular';
+}
+
+p{
+    text-align: center;
+    font-family: 'SAOUI-Regular';
+}
+
+body img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    background-image: linear-gradient(to right, white, black);
+    padding: 30px;
+    text-align: right;
+    font-family: 'SAOUI-Regular, sans-serif';
+    align-items: right;
+}
+
+header a {
+    margin-right: 10px;
+    font-family: 'SAOUI-Regular'; 
+    color: black;
+    font-size: 150%;
+}
+
+header :hover {
+    color: blue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+    background-image: linear-gradient(to right, black, white);
+}
+
+footer a img {
+    width: 40px;  
+    height: 40px; 
+    margin: 5px;
+    object-fit: contain; 
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    align-items: right;
+}
+
+ /* Kontainer utama slider */
+ .slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /* Menyembunyikan gambar di luar viewport */
+}
+
+/* Kontainer untuk gambar-gambar slider */
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animasi perpindahan gambar */
+}
+
+/* Gambar dalam slider */
+.slider-item {
+    min-width: 100%; /* Setiap gambar mengambil 100% dari lebar slider */
+}
+
+/* Mengatur ukuran gambar agar sama */
+.slider-image {
+    width: 200px; /* Mengatur lebar gambar 100% dari parent */
+    height: 400px; 
+}
+
+/* Tombol prev dan next */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparan gelap */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50%; /* Membuat tombol bulat */
+}
+
+/* Tombol prev di sebelah kiri */
+.prev {
+    left: 10px;
+}
+
+/* Tombol next di sebelah kanan */
+.next {
+    right: 10px;
+}
+
+figcaption {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    font-size: 16px; /* Ukuran font */
+    font-family: 'SAOUI-Regular';
+    color: #333; /* Warna teks */
+    margin-top: 8px; /* Jarak atas dari gambar */
+    padding: 5px 10px; /* Jarak dalam (padding) untuk menambah ruang di sekeliling teks */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih dengan transparansi */
+    border-radius: 5px; /* Membulatkan sudut */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut di belakang deskripsi */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+/* Efek hover pada deskripsi */
+figcaption:hover {
+    background-color: rgba(255, 255, 255, 1); /* Mengubah latar belakang menjadi lebih solid saat di-hover */
+}

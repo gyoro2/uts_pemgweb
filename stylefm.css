@@ -1,0 +1,153 @@
+@font-face{
+    font-family: 'SAOUI-Regular';
+    src: url('font/SAOUI-Regular.otf') format('opentype'),
+         url('font/SAOUI-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2{
+    text-align: center;
+    font-family: 'SAOUI-Regular';
+}
+
+p{
+    text-align: center;
+    font-family: 'SAOUI-Regular';
+}
+
+body img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    background-image: linear-gradient(to right, white, black);
+    padding: 30px;
+    text-align: right;
+    font-family: 'SAOUI-Regular, sans-serif';
+}
+
+header a {
+    margin-right: 10px;
+    font-family: 'SAOUI-Regular'; 
+    color: black;
+    font-size: 150%;
+}
+
+header :hover {
+    color: blue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+    background-image: linear-gradient(to right, black, white);
+}
+
+footer a img {
+    width: 40px;  
+    height: 40px; 
+    margin: 5px;
+    object-fit: contain; 
+}
+
+body {
+    font-family: 'SAOUI-Regular', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+    width: 100%; 
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'SAOUI-Regular';
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: white;
+    font-family: 'SAOUI-Regular';
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-family: 'SAOUI-Regular';
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00b3b3;
+}
+
+form h1 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'SAOUI-Regular';
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffff;
+    border-color: #00ffff;
+}
+
+h1{
+    font-family: 'SAOUI-Regular';
+    text-align: center;
+}
+
+.gender-options, .interest-options {
+    display: flex;
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    gap: 15px; /* Jarak antar item */
+}
+
+.gender-options label, .interest-options label {
+    margin: 0; /* Menghapus margin default */
+}

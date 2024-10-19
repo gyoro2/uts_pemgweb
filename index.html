@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Character</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<header>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-3 col-md-4 sidebar">
+            <nav>
+                <ul class="nav flex-row">
+                    <a href="index.html">Home</a>
+                    <a href="input.html">Input</a>
+                    <a href="tabel.html">Tabel</a>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+    <img src="logo.png" alt="Logo" class="logo">
+</header>
+
+<body>
+    <div itemscope itemtype="http://schema.org/Person">
+        <h2 itemprop="name">Kirigaya Kazuto (桐ヶ谷 和人)</h2>
+        <img src="kiritohome.png" alt="Kirito" itemprop="image">
+        <p itemprop="description">This page description about Kirigaya Kazuto a.k.a Kirito from Sword Art Online. Kirigaya Kazuto (桐ヶ谷 和人) is a fictional character and the protagonist of the Sword Art Online series of light novels written by Reki Kawahara. He is more commonly known by his portmanteau, Kirito (キリト), his player name in the eponymous video game which the novels are partially set in. Kirito is a player of the VRMMORPG "Sword Art Online". He is a solo player who had the ability to play for ten hours straight due to his previous experience with games. He was one of the 10,000 players who were trapped in Sword Art Online, where he remained until he cleared the game. He is portrayed as a teenager who was formerly a beta tester for the titular game, and is known for being one of the game's best players. He is usually depicted wearing a black longcoat with a blue outline.</p>
+        <br>
+        <p>Appears in:
+            <br> 
+            <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+              <span itemprop="name">Sword Art Online 1, Sword Art Online 2, Sword Art Online : Ordinal Scale, Sword Art Online 3, Sword Art Online: Progressive - Aria Of Starless Night</span>
+            </span>
+          </p>
+        <br>
+    
+        <div class="slider" itemscope itemtype="https://schema.org/ImageGallery">
+            <div class="slider-container">
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito1.png" alt="Image 1" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito Sword Art Online</figcaption>
+                </figure>
+                
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito2.png" alt="Image 2" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito ALfheim Online</figcaption>
+                </figure>
+        
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito3.png" alt="Image 3" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito Gun Gale Online</figcaption>
+                </figure>
+
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito4.png" alt="Image 4" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito ALO</figcaption>
+                </figure>
+
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito5.png" alt="Image 5" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito Ordinal Scale</figcaption>
+                </figure>
+
+                <figure class="slider-item" itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="kirito6.png" alt="Image 6" class="slider-image" itemprop="contentUrl">
+                    <figcaption itemprop="caption">Kirito Alicization</figcaption>
+                </figure>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        
+
+    </div>
+</body>
+
+
+<footer>
+    <div class="separator"></div>
+    <a href="https://github.com/gyoro2"><img src="gh.png" alt="GitHub"></a>
+    <a href="https://www.facebook.com/profile.php?id=100077368664870"><img src="fb.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/parhusipcarlos/"><img src="ig.png" alt="Instagram"></a>
+    <a href="https://www.youtube.com/@carlosparhusip9630"><img src="yt.png" alt="YouTube"></a>
+</footer>
+
+<script>
+    let currentSlide = 0;
+
+function moveSlide(direction) {
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slider-item');
+    const totalSlides = slides.length;
+
+    // Update current slide
+    currentSlide += direction;
+
+    // Looping slide
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;  // Jika slide saat ini < 0, kembali ke slide terakhir
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;  // Jika slide saat ini > total slides, kembali ke slide pertama
+    }
+
+    // Menghitung lebar slide
+    const slideWidth = slides[0].clientWidth;
+    sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+
+// Optional: Auto-slide setiap 5 detik
+setInterval(() => {
+    moveSlide(1);
+}, 15000);
+
+</script>
+</html>
