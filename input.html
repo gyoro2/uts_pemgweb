@@ -72,6 +72,20 @@
         </div>
         <button type="submit">submit</button>
     </form>
+
+    <script>
+        document.getElementById("betaTestForm").addEventListener("submit", function(event){
+            event.preventDefault(); // Mencegah form agar tidak langsung dikirim
+
+            alert("Data telah tersimpan!");
+
+            // Mengirim form setelah menampilkan alert
+            this.submit();
+
+            // Reload halaman setelah submit
+            location.reload();
+        });
+    </script>
 </body>
 
 <footer>
